@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Киного</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+<!-- Bootstrap CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/variables.css" type="text/css">
+	<!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+	<link href="font-awesome-4.7.0\css\font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark justify-content-between align-items-center my-0 mx-auto px-3 py-0">
+			<a class="navbar-brand text-uppercase py-0" href="#">kinogo</a>
+			<div class="buttons d-flex justify-content-end">
+				<button id="xs-search" class="navbar-toggler d-md-none mr-1" type="button" data-toggle="collapse" data-target="" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				</button>
+				<button id="xs-menu" class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+			<div class="d-none d-md-none" id="search">
+				<form id="xs-form" class="form-inline my-lg-0">
+					<input class="form-control p-1 m-0 my-form-control" type="search" placeholder="Поиск по сайту" aria-label="Search">
+				</form>
+			</div>
+			<div class="collapse navbar-collapse px-3" id="navbarSupportedContent">
+				<ul class="navbar-nav text-uppercase d-block d-md-none">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Главная</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Новинки</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Стол заказов</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Помощь</a>
+					</li>
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a href="" class="dropdown-item">Биографии</a>
+				          <a href="" class="dropdown-item">Боевики</a>
+				          <a href="" class="dropdown-item">Вестерны</a>
+				          <a href="" class="dropdown-item">Военные</a>
+				          <a href="" class="dropdown-item">Детективы</a>
+				          <a href="" class="dropdown-item">Детские</a>
+				          <a href="" class="dropdown-item">Документальные</a>
+				          <a href="" class="dropdown-item">Драмы</a>
+				          <a href="" class="dropdown-item">Исторические</a>
+				          <a href="" class="dropdown-item">Комедии</a>
+				          <a href="" class="dropdown-item">Криминал</a>
+				          <a href="" class="dropdown-item">Мелодрамы</a>
+				          <a href="" class="dropdown-item">Мультфильмы</a>
+				          <a href="" class="dropdown-item">Мюзиклы</a>
+				          <a href="" class="dropdown-item">Отечественные</a>
+				          <a href="" class="dropdown-item">Приключения</a>
+				          <a href="" class="dropdown-item">Семейные</a>
+				          <a href="" class="dropdown-item">Спортивные</a>
+				          <a href="" class="dropdown-item">Триллеры</a>
+				          <a href="" class="dropdown-item">Ужасы</a>
+				          <a href="" class="dropdown-item">Фантастика</a>
+				          <a href="" class="dropdown-item">Фэнтези</a>
+				        </div>
+					</li>
+
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Фильмы по году</a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				        	<a href="" class="dropdown-item">2015 года</a>
+				    		<a href="" class="dropdown-item">2016 года</a>
+				    		<a href="" class="dropdown-item">2017 года</a>	  	
+				        </div>
+					</li>
+
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Фильмы по странам</a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a href="" class="dropdown-item">Американские</a>
+				          <a href="" class="dropdown-item">Британские</a>
+				          <a href="" class="dropdown-item">Российские</a>
+				          <a href="" class="dropdown-item">Индийские</a>
+				          <a href="" class="dropdown-item">Немецкие</a>
+				          <a href="" class="dropdown-item">Французкие</a>
+				        </div>
+					</li>
+
+					<li class="nav-item dropdown">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Сериалы</a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a href="" class="dropdown-item">Русские</a>
+				          <a href="" class="dropdown-item">Зарубежные</a>
+				          <a href="" class="dropdown-item">Турецкие</a>
+				        </div>
+					</li>
+					<li class="nav-item dropdown">
+						<div id="reg-login" class="d-flex flex-row">
+							<a class="nav-link mx-0 px-0" href="">Вход</a>
+							<span class="py-2">&nbsp/&nbsp</span>
+							<a class="nav-link ml-0 mr-2 px-0" href="">Регистрация</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="d-none d-md-block">
+				<div class="form-login d-flex align-items-center">
+					<div id="reg-login" class="d-flex justify-content-end">
+						<a class="nav-link mx-0 px-0" href="">Вход</a>
+						<span class="py-2">&nbsp/&nbsp</span>
+						<a class="nav-link ml-0 mr-2 px-0" href="">Регистрация</a>
+					</div>
+					<form id="sm-xl-form" class="form-inline my-lg-0 d-none d-md-block">
+						<input class="form-control p-1 m-0 my-form-control" type="search" placeholder="Поиск" aria-label="Search">
+						<button class="btn py-0 btn-outline-success search-btn rounded-0 p-0" type="submit">ok</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="indentation">
+		<!-- <i class="fa fa-adjust fa-5x" style="color: red;"></i> -->
+	</div>
+	<div class="container">
+		<div class="menu d-none d-md-block">
+			<div id="navi" class="d-flex justify-content-end">
+				<ul class="nav nav-tabs text-uppercase rounded-top">.
+					<li class="nav-item rounded-top">
+						<a class="nav-link pt-1" href="#">Главная</a>
+					</li>
+					<li class="nav-item rounded-top">
+						<a class="nav-link pt-1" href="#">Новинки</a>
+					</li>
+					<li class="nav-item rounded-top">
+						<a class="nav-link pt-1" href="#">Стол заказов</a>
+					</li>
+					<li class="nav-item rounded-top">
+						<a class="nav-link pt-1" href="#">Помощь</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="slider clearfix">
+			<div id="desktop">
+				<!--The proportions of images should be 1.5!-->
+				<div id="carouselExampleControls" class="carousel slide" data-interval="false" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				    	<div class="d-flex flex-row p-2">
+				    		<a href=""><img class="d-block mr-2" src="images\slider\chelovekpaukvozvraschenie.jpg" alt="First slide"></a>
+				    		<a href=""><img class="d-block mr-2" src="images\slider\moguchiereyndzhery.jpg" alt="First slide"></a>
+				    		<a href=""><img class="d-block mr-2" src="images\slider\sdelanovamerike.jpg" alt="First slide"></a>
+				    		<a href=""><img class="d-block mr-2" src="images\slider\tehasskaya-reznya-benzopiloy-2017.jpg" alt="First slide"></a>
+				    		<a href=""><img class="d-block mr-2" src="images\slider\kingsmanzolotoekolco.jpg" alt="First slide"></a>
+				    		<a href=""><img class="d-block mr-2" src="images\slider\mech-korolya-artura-2017.jpg" alt="First slide"></a>
+				    		<a href=""><img class="d-block" src="images\slider\gadkiyya3.jpg" alt="First slide"></a>
+				      	</div>
+				    </div>
+				    <div class="carousel-item">
+			    		<div class="d-flex flex-row p-2">
+				      		<a href=""><img class="d-block mr-2" src="images\slider\chernue-spisok-2017-5-sezon.jpg" alt="Second slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\dale-2-sezon.jpg" alt="Second slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\hroniki-shannary-2-sezon.jpg" alt="Second slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\lzhec-1-sezon.jpg" alt="Second slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\mister-robot-3-sezon.jpg" alt="Second slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\myslit-kak-prestupnik-13-sezon.jpg" alt="Second slide"></a>
+				      		<a href=""><img class="d-block" src="images\slider\naciya-z-2017.jpg" alt="Second slide"></a>
+				  		</div>
+				    </div>
+				    <div class="carousel-item" id="third">
+			    		<div class="d-flex flex-row p-2">
+				      		<a href=""><img class="d-block mr-2" src="images\slider\pozharnye-chikago-6-sezon.jpg" alt="Third slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\snegovik-2017.jpg" alt="Third slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\strela-6-2017.jpg" alt="Third slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\sverhestestvo-13-sezon.jpg" alt="Third slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\teorija-bolshogo-vzryva-11-sezon-2017.jpg" alt="Third slide"></a>
+				      		<a href=""><img class="d-block mr-2" src="images\slider\ubiystvo-v-vostoch-2017.jpg" alt="Third slide"></a>
+				      		<a href=""><img class="d-block" src="images\slider\wan-hulsing-2-sezon.jpg" alt="Third slide"></a>
+				  		</div>
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+		<div class="soon d-block d-md-none">
+		</div>
+		<div class="updateSer d-block d-md-none">
+			<div class="wrapper-update-serials d-flex justify-content-between">
+				<button id="show-update-serials" type="button" data-show="hide">
+					<!-- <svg-icon class="glyph-icon"><src href="images/svg/si-glyph-arrow-down.svg" /></svg-icon> -->
+		<!-- 			<svg-icon><src href="images\sprite.svg#si-glyph-arrow-down"/></svg-icon> -->
+					<i id="toggle-down-menu" class="fa fa-sort-down fa-5x"></i>
+				</button>
+			</div>
+			<div id="show-hide-update-serials"></div>
+		</div>
+		<article class="d-flex flex-row">
+			<aside class="d-none d-md-block">
+				<h5>Панель навигации</h5>
+				<nav class="d-flex flex-lg-row flex-md-column">
+					<div class="category">
+						<h5>Категории</h5>
+						<a href="" class="dropdown-item">Биографии</a>
+						<a href="" class="dropdown-item">Боевики</a>
+						<a href="" class="dropdown-item">Вестерны</a>
+						<a href="" class="dropdown-item">Военные</a>
+						<a href="" class="dropdown-item">Детективы</a>
+						<a href="" class="dropdown-item">Детские</a>
+						<a href="" class="dropdown-item">Документальные</a>
+						<a href="" class="dropdown-item">Драмы</a>
+						<a href="" class="dropdown-item">Исторические</a>
+						<a href="" class="dropdown-item">Комедии</a>
+						<a href="" class="dropdown-item">Криминал</a>
+						<a href="" class="dropdown-item">Мелодрамы</a>
+						<a href="" class="dropdown-item">Мультфильмы</a>
+						<a href="" class="dropdown-item">Мюзиклы</a>
+						<a href="" class="dropdown-item">Отечественные</a>
+						<a href="" class="dropdown-item">Приключения</a>
+						<a href="" class="dropdown-item">Семейные</a>
+						<a href="" class="dropdown-item">Спортивные</a>
+						<a href="" class="dropdown-item">Триллеры</a>
+						<a href="" class="dropdown-item">Ужасы</a>
+						<a href="" class="dropdown-item">Фантастика</a>
+						<a href="" class="dropdown-item">Фэнтези</a>
+					</div>
+					<div class="others-category">
+						<div class="byYear">
+							<h5>По году</h5>
+				        	<a href="" class="dropdown-item">2015 года</a>
+				    		<a href="" class="dropdown-item">2016 года</a>
+				    		<a href="" class="dropdown-item">2017 года</a>	  	
+						</div>
+						<div class="byCountry">
+							<h5>По странам</h5>
+							<a href="" class="dropdown-item">Американские</a>
+							<a href="" class="dropdown-item">Британские</a>
+							<a href="" class="dropdown-item">Российские</a>
+							<a href="" class="dropdown-item">Индийские</a>
+							<a href="" class="dropdown-item">Немецкие</a>
+							<a href="" class="dropdown-item">Французкие</a>
+						</div>
+						<div class="TVSeries">
+							<h5>Сериалы</h5>
+							<a href="" class="dropdown-item">Русские</a>
+							<a href="" class="dropdown-item">Зарубежные</a>
+							<a href="" class="dropdown-item">Турецкие</a>
+						</div>
+					</div>
+				</nav>
+				<h5 class="soonOnTheSite" data-soonOnTheSite="">Скоро на сайте</h5>
+				<nav class="soonOnTheSiteContent d-flex flex-lg-row flex-md-column" data-soonOnTheSite="">
+					<figure class="first">
+					    <img class="d-block" src="images\sidebar\ubiystvo-v-vostoch-2017.jpg" alt="Third slide">
+					    <figcaption><a href="">Убийство в Восточном експрессе (2017)</a></figcaption>
+					</figure>
+			   		<figure class="second">
+					    <img class="d-block" src="images\sidebar\snegovik-2017.jpg" alt="Third slide">
+					    <figcaption><a href="">Снеговик (2017)</a></figcaption>
+					</figure>
+				</nav>
+				<h5 class="updateSerials">Обновления сериалов</h5>
+				<nav class="updateSerialsContent d-flex flex-column">
+					<div class="column d-flex flex-lg-row flex-md-column">
+						<figure class="first">
+						    <img class="d-block" src="images\sidebar\chernue-spisok-2017-5-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Черный список (5 сезон)</a></figcaption>
+						</figure>
+				   		<figure class="second">
+						    <img class="d-block" src="images\sidebar\naciya-z-2017.jpg" alt="Third slide">
+						    <figcaption><a href="">Нация Z (4 сезон)</a></figcaption>
+						</figure>
+					</div>
+					<div class="column d-flex flex-lg-row flex-md-column">
+						<figure class="first">
+						    <img class="d-block" src="images\sidebar\lzhec-1-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Лжец (1 сезон)</a></figcaption>
+						</figure>
+				   		<figure class="second">
+						    <img class="d-block" src="images\sidebar\mister-robot-3-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Мистер Робот (3 сезон)</a></figcaption>
+						</figure>
+					</div>
+					<div class="column d-flex flex-lg-row flex-md-column">
+						<figure class="first">
+						    <img class="d-block" src="images\sidebar\teorija-bolshogo-vzryva-11-sezon-2017.jpg" alt="Third slide">
+						    <figcaption><a href="">Теория большого взрыва (11 сезон)</a></figcaption>
+						</figure>
+				   		<figure class="second">
+						    <img class="d-block" src="images\sidebar\dale-2-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Ривердейл (2 сезон)</a></figcaption>
+						</figure>
+					</div>
+					<div class="column d-flex flex-lg-row flex-md-column">
+						<figure class="first">
+						    <img class="d-block" src="images\sidebar\hroniki-shannary-2-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Хроники Шаннары (2 сезон)</a></figcaption>
+						</figure>
+				   		<figure class="second">
+						    <img class="d-block" src="images\sidebar\pozharnye-chikago-6-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Пожарные Чикаго (6 сезон)</a></figcaption>
+						</figure>
+					</div>
+					<div class="column d-flex flex-lg-row flex-md-column">
+						<figure class="first">
+						    <img class="d-block" src="images\sidebar\myslit-kak-prestupnik-13-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Мыслить как преступник (13 сезон)</a></figcaption>
+						</figure>
+				   		<figure class="second">
+						    <img class="d-block" src="images\sidebar\wan-hulsing-2-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Ван Хельсинг (2 сезон)</a></figcaption>
+						</figure>
+					</div>
+					<div class="column d-flex flex-lg-row flex-md-column">
+						<figure class="first">
+						    <img class="d-block" src="images\sidebar\sverhestestvo-13-sezon.jpg" alt="Third slide">
+						    <figcaption><a href="">Сверхъестественное (13 сезон)</a></figcaption>
+						</figure>
+				   		<figure class="second">
+						    <img class="d-block" src="images\sidebar\strela-6-2017.jpg" alt="Third slide">
+						    <figcaption><a href="">Стрела (6 сезон)</a></figcaption>
+						</figure>
+					</div>
+				</nav>
+				<h5 class="recentComments">Последние коментарии</h5>
+				<nav id="comments">
+					<div id="first" class="comment"> 
+						<h6><a href="">Пункт назначения 4 (2009)</a></h6>
+						<p><a href="">Ангелина91</a>:&nbspКрайне слабо, каждая последующая часть деградирует, одно сплошное кровавое месиво и мало смысла. Один и тот же конец, очень примитивно. Филь...</p>
+					</div>
+					<div class="comment">
+						<h6><a href="">С днем Рождения (2016)</a></h6>
+						<p><a href="">Kiruha777</a>:&nbspФильм норм, рекомендую к просмотру, но вот только вторая половина фильма слабовата как-то (я не имею ввиду конец, окончание, прикол). Да и к...</p>
+					</div>
+					<div class="comment">
+						<h6><a href="">Пункт назначения 4 (2009)</a></h6>
+						<p><a href="">Ангелина91</a>:&nbspКрайне слабо, каждая последующая часть деградирует, одно сплошное кровавое месиво и мало смысла. Один и тот же конец, очень примитивно. Филь...</p>
+					</div>
+					<div class="comment">
+						<h6><a href="">Пункт назначения 4 (2009)</a></h6>
+						<p><a href="">Ангелина91</a>:&nbspКрайне слабо, каждая последующая часть деградирует, одно сплошное кровавое месиво и мало смысла. Один и тот же конец, очень примитивно. Филь...</p>
+					</div>
+					<div class="comment">
+						<h6><a href="">Пункт назначения 4 (2009)</a></h6>
+						<p><a href="">Ангелина91</a>:&nbspКрайне слабо, каждая последующая часть деградирует, одно сплошное кровавое месиво и мало смысла. Один и тот же конец, очень примитивно. Филь...</p>
+					</div>
+					<div class="comment">
+						<h6><a href="">Пункт назначения 4 (2009)</a></h6>
+						<p><a href="">Ангелина91</a>:&nbspКрайне слабо, каждая последующая часть деградирует, одно сплошное кровавое месиво и мало смысла. Один и тот же конец, очень примитивно. Филь...</p>
+					</div>
+					<div class="comment">
+						<h6><a href="">Пункт назначения 4 (2009)</a></h6>
+						<p><a href="">Ангелина91</a>:&nbspКрайне слабо, каждая последующая часть деградирует, одно сплошное кровавое месиво и мало смысла. Один и тот же конец, очень примитивно. Филь...</p>
+					</div>
+					<div class="last"></div>
+				</nav>
+			</aside>
+			<section>
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Лунатик (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">			
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\lunatik-2017.jpg" alt="Лунатик (2017)"></a>В прошлом молодая женщина по имени Сара пережила настоящий ужас – муж застрелился прямо у неё на глазах. Вскоре после этого героиня стала видеть кошмары, от которых ей никак не удаётся избавиться. В своих страшных снах она постоянно видит странные вещи, а также одного и того же мужчину, который хочет ей навредить. Некоторое время девушка сама пыталась справиться с этой проблемой, но последней каплей стало то, что она однажды проснулась в нескольких километрах от своего дома, стоящая посреди дороги. Кошмары и хождения во сне вынудили её обратится к психологу, которая постаралась во всём разобраться...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Триллер</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:27:14</p>
+						<p><strong>Премъера (РФ):</strong> 19 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:26</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Двуличный любовник (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\dvulichnyy-lyubovnik-2017.jpg" alt="Двуличный любовник (2017)"></a>Пытаясь решить свои жизненные проблемы, Хлоя обращается за помощью к психоаналитику. Постепенно девушка сближается со специалистом, и вскоре между ней и Полом пробегает искра. Между ними завязывают романтические отношения, и Пол даже делает девушке предложение руки и сердца. Хлоя живёт будто в сказке, ведь ей, наконец, удалось найти мужчину, которого она очень любит. Он заботится о ней, всячески её оберегает и понимает её, как никто другой. Девушка чувствует себя счастливой, и кажется, что ничто не может помешать безоблачному будущему. Но неожиданно для себя героиня начинает замечать... </p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Триллер,</a>&nbsp<a href="">Драма</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:44:46</p>
+						<p><strong>Премъера (РФ):</strong> 18 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:23</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>История семьи Майровиц (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">	
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\istorii-semi-mayrovic-2017.jpg" alt="История семьи Майровиц (2017)"></a>Гарольд Майровиц – пожилой и очень талантливый скульптор.  Также он является главой далеко не самого дружного семейства, члены которого нередко грызутся между собой. Он всегда знал, что вместе родственников собирать нельзя, ведь они ведут себя неадекватно и совершают глупые поступки. Однако Гарольд решает всех собрать у себя дома в Нью-Йорке, так как вскоре состоится открытие его выставки в музее современных искусств. Это важное для него событие, и он хочет, чтобы все близкие ему люди при этом присутствовали. Он и представить себе не мог, что его желание собрать семью под одной крышей...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Драма,</a>&nbsp<a href="">Комедия</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:49:26</p>
+						<p><strong>Премъера (РФ):</strong> 18 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:20</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Побег из бибилиотеки мистера Лимончелло (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\pobeg-iz-biblioteki-mistera-2017-.jpg" alt="Побег из бибилиотеки мистера Лимончелло (2017)"></a>Двенадцатилетний Кайл просто обожает компьютерные игры. Он может часами проходить одну игрушку, забывая обо всём на свете. Больше всего ему нравятся творения гениального разработчика Луиджи Лимончелло. Он создаёт по-настоящему увлекательные компьютерные и настольные игры, пройти которые удаётся далеко не всегда. Он постоянно радует детей новыми квестами, которые надолго увлекают их. Кайл не может представить своей жизни без прохождений любимых игр. Совсем недавно подросток узнал восхитительную для себя новость – мистер Лимончелло открывает в городе библиотеку...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Симейный</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:06:10</p>
+						<p><strong>Премъера (РФ):</strong> 17 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:17</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Будь мужиком (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">	
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\bud-muzhikom-2017-.jpg" alt="Будь мужиком (2017)"></a>Сантьяго, Эдуардо и Рауль – три лучших друга, которые всё свободное время проводят вместе. Герои вместе отдыхают, играют в футбол и видеоигры, напиваются, обсуждают свои любовные похождения и даже принимают душ после тренировки. Они знакомы уже много лет, и за это время между ними не возникало никаких конфликтов. У них нет друг от друга абсолютно никаких секретов, по крайне мере, им так казалось. Их жизни и дружба сильно изменились после того, как раскрылась тайна Сантьяго, которую он много лет от всех скрывал, в том числе и от своей девушки. Выяснилось, что парень...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong>Чили</p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Комедия</a></p>
+						<p><strong>Kачество:</strong> TS</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:34:30</p>
+						<p><strong>Премъера (РФ):</strong> 18 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:13</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Вероника (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\veronika-2017.jpg" alt="Вероника (2017)"></a>Во время солнечного затмения юная Вероника вместе со своими подругами решает провести спиритический сеанс. Девушки спускаются в подвал и пытаются выйти на связь с духами. Они и не думали, что это к чему-то приведёт, но в итоге их затея приводит к самым неожиданным последствиям. Вероника теряет сознание и впадает в транс, а за несколько секунд до этого она вместе с подругами стала свидетельницей странных явлений. Вскоре юная героиня приходит в себя. Она пытается забыть о случившемся, даже не догадываясь, что самое плохое уже произошло. Постепенно девушка осознаёт...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Ужасы,</a>&nbsp<a href="">Триллер</a></p>
+						<p><strong>Kачество:</strong> TS</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:39:44</p>
+						<p><strong>Премъера (РФ):</strong> 20 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:08</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Коматозники (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">	
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\komatozniki-2017-.jpg" alt="Коматозники (2017)"></a>Любознательную студентку медицинского факультета Кортни Холмс уже давно мучает один вопрос: что ждёт нас после смерти? За всё время никто так и не смог дать точный ответ на эту загадку. Девушка решает самостоятельно разобраться в этом вопросе, и сделать это она хочет с помощью науки. Героиня находит ещё четверых студентов-авантюристов, вместе с которыми она берёт всё необходимое оборудование для эксперимента. Кортни реализовывает свою опасную затею – ей на 1 минуту останавливают сердце, а после этого возвращают её к жизни с помощью реанимационного оборудования...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Ужасы,</a>&nbsp<a href="">Фантастика</a></p>
+						<p><strong>Kачество:</strong> CAMRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:40:28</p>
+						<p><strong>Премъера (РФ):</strong> 20 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 20:05</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Ветренная река (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">	
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\vetrenayareka.jpg" alt="Ветренная река (2017)"></a>Опытный охотник и следопыт Кори Ламберт в прошлом пережил ужасную трагедию, повлиявшую на него. Он буквально начал всё с нуля, и теперь уже достаточно долго работает егерем в индейской резервации под названием «Ветреная река». Его жизнь размеренна, а на работе не происходит ровным счётом ничего интересного. Однако всё переворачивается с ног на голову, когда во время запланированного обхода территории он находит тело убитой девушки. Герой сразу же сообщает об этом в соответствующие органы, и вскоре для расследования...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Боевик,</a>&nbsp<a href="">Триллер,</a>&nbsp<a href="">Криминал</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:45:02</p>
+						<p><strong>Премъера (РФ):</strong> 03 августа 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>Сегодня, 06:03</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Няня (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">	
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\nyanya.jpg" alt="Няня (2017)"></a>Подростку по имени Коул очень повезло, ведь у него самая красивая, популярная и прикольная няня из всех возможных. Парень сам того не замечает, как по уши влюбляется в Би, которая должна провести в его доме ещё одну ночь, пока родители отдыхают на вечеринке. Она укладывает его вечером спать, но Коул из любопытства решает встать ночью и посмотреть, чем в это время занимается его няня. Выйдя из комнаты, он наблюдает довольно жуткую и странную картину – Би вместе с несколькими своими друзьями жестоко расправляется с каким-то парнем прямо посреди гостиной...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong><a href="">США</a></p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Ужасы,</a>&nbsp<a href="">Ужасы</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:26:50</p>
+						<p><strong>Премъера (РФ):</strong> 13 октября 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>18 октября 2017</span>
+						</div>
+					</div>
+
+				</article>
+				<div class="br"></div>
+
+				<article class="annotation">
+					<div class="head d-flex  justify-content-between">
+						<h5>Зеро 3 (2017)</h5>
+						<div class="rating-bookmarks d-flex flex-row">
+							<div class='starrr' id='star1'></div>
+							<img class="fav" src="images\plus_fav.gif">	
+						</div>					
+					</div>
+					<div class="content clearfix">
+						<p class="description"><a class="main-image float-left" href=""><img src="images\content_image\zero3.jpg" alt="Зеро 3 (2017)"></a>В политической элите Литвы назревает громкий скандал, а всё из-за прокурора, которая оказывается связана с наркотиками. Идя на дно, она решает прихватить с собой ещё нескольких высокопоставленных чиновников из правительства. Прокурор выставляет на аукцион накопленные за годы работы документы, доказывающие коррупцию на самой верхушке. Если эти документы попадут не в те руки, то это будет иметь самые ужасные последствия для властей. Раздобыть столь важную компрометирующую информацию хочет лидер оппозиции, который, если понадобится, готов взять даже...</p>
+						<p><strong>Год выпуска:&nbsp</strong><a href="">2017</a></p>
+						<p><strong>Страна:&nbsp</strong>Литва</p>
+						<p><strong>Жанр:&nbsp</strong><a href="">Триллер</a></p>
+						<p><strong>Kачество:</strong> HDRip</p>
+						<p><strong>Перевод:</strong> Профессиональный (многоголосый)</p>
+						<p><strong>Продолжительность:</strong> 01:27:23</p>
+						<p><strong>Премъера (РФ):</strong> 27 января 2017</p>
+					</div>
+					<div class="watch d-flex justify-content-between my-3">
+						<div href="" class="wrapperButton"><button class="" type="submit">Смотреть онлайн</button></div>
+						<div class="time d-flex justify-content-end">
+							<img src="images\clock.jpg" alt="">
+							<span>18 октября 2017</span>
+						</div>
+					</div>
+				</article>
+				<div class="br"></div>
+				<nav id="pag" class="" aria-label="Page navigation example">
+					<ul class="pagination 2d-flex justify-content-center">
+						<li class="page-item"><a href="" class="page-link">Раньше</a></li>
+ 						<li class="page-item"><a href="" class="page-link">1</a></li>
+						<li class="page-item"><a href="" class="page-link">2</a></li>
+						<li class="page-item"><a href="" class="page-link">3</a></li>
+						<li class="page-item"><a href="" class="page-link" data-resolution="320">4</a></li>
+						<li class="page-item"><a href="" class="page-link" data-resolution="320">5</a></li>
+						<li class="page-item"><a href="" class="page-link" data-resolution="320">6</a></li>
+						<li class="page-item"><a href="" class="page-link" data-resolution="320">7</a></li>
+						<li class="page-item d-none d-lg-block"><a href="" class="page-link" data-resolution="320">8</a></li>
+						<li class="page-item d-none d-lg-block"><a href="" class="page-link" data-resolution="320">9</a></li>
+						<li class="page-item d-none d-lg-block"><a href="" class="page-link" data-resolution="320">10</a></li>
+						<li class="page-item"><a id="dummy" href="#" class="page-link">. . .</a></li>
+						<li class="page-item"><a href="" class="page-link">583</a></li>
+						<li class="page-item"><a href="" class="page-link">Позже</a></li>
+					</ul>
+				</nav>
+			</section>
+		</article>
+		<footer>
+			<p>Рады приветствовать всех любителей интересного и качественного кино на нашем сайте! Вы любите кинематограф также как мы? Постоянно следите за выходом новинок? Не проходит ни одного вечера, чтобы вы не посмотрели пару-тройку фильмов? Тогда вы пришли точно по адресу! В нашем кинотеатре можно <strong>смотреть фильмы онлайн бесплатно</strong> и без каких-либо ограничений!</p>
+			<p><img class="float-left mr-4" src="images\footer-main.jpg" alt="">Специально для наших уважаемых пользователей мы постарались собрать лучшую коллекцию фильмов различных жанров, времен и народов! Команда проекта постоянно следит за выходом фильмов в прокат и регулярно добавляет картины, чтобы вы могли  одними из первых наслаждаться, как лучшими мировыми шедеврами, так и новинками кино совершенно бесплатно!</p>
+			<p>У нас вы найдете лучшие фильмы «Золотой эпохи» Голливуда, классическое европейское кино, лучшие французские комедии, азиатское кино, советские картины и современные хиты <a href="">2011,</a><a href=""> 2012,</a> а также <a href="">фильмы 2013</a> годов. Мы собрали внушительную коллекцию художественных и документальных фильмов, боевиков и триллеров, фэнтези и фантастики, драм и мелодрам, здесь же вы найдете <a href="">комедии, </a><a href="">ужасы</a>, приключенческие и исторические ленты, детективы, вестерны, кино на военную тематику, а также картины других жанров и направлений. У нас смотреть фильмы можно в любое время, в неограниченных количествах, совершенно бесплатно и при этом в отличном качестве! Собирайтесь с друзьями, выбирайте хорошее кино, смотрите и делитесь впечатлениями! Здесь каждый сможет найти что-то интересное для себя. Жанровое кино, старый добрый советский фильм, а может быть, интересную документальную ленту. Любители новинок также смогут смотреть свежие фильмы 2014 в хорошем качестве картинки и звука.</p>
+			<p>Специально для вашего удобства на сайте действует поисковая строка, благодаря которой можно быстро отыскать нужный фильм, введя его русское или оригинальное название. Если поиск не дал результатов, попробуйте воспользоваться расширенным поиском или напишите нам, и мы обязательно постараемся добавить нужный вам фильм. Также мы постарались максимально удобно структурировать сам сайт, чтобы искать фильмы различных жанров стало еще проще. Мы стараемся удовлетворять запросы широкого круга зрителей, поэтому оперативно добавляем новые фильмы практически сразу после их выхода в прокат, а затем регулярно обновляем их качество на лучшее сразу после релиза DVD или Blu-ray дисков. Поэтому наш кинотеатр готов стать верным партнером и помощником, как для ценителей отменного качества, так и для тех зрителей, которые предпочитают посмотреть новый фильм как можно быстрее.</p>
+			<p>Смотрите хорошее <strong>кино онлайн бесплатно,</strong> без регистрации и отправки смс даже не выходя из дома!</p>
+			<div class="rightsHolders">
+				<img class="mr-4" src="images\strelka.JPG" alt="">
+				<a href="">Правообладателям</a>
+				<img src="images\dot.JPG" alt="">
+				<a href="">Контакты</a>
+			</div>
+		</footer>
+	</div>
+
+    <!-- optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/iconwc.js"></script>
+	<script type="text/javascript" src="js/starrr.js"></script>
+	<script type="text/javascript" src="js/script.js">
+		
+//шапка1263x34
+//wrapper976x4840
+//side974 и content641
+	</script>
+				      	
+</body>
+</html>
